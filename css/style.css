@@ -1,0 +1,105 @@
+/* Table of Contents
+______________________________________
+-General Content
+-Typography
+-Header and Navigation
+-Images and Media
+-Footer
+-Media Queries
+______________________________________ */
+
+/* General Content
+______________________________________ */
+.main{padding-top: 3%;}
+.row{padding: 2% 0;}
+.black{background-color: #000;}
+
+/* Typography
+______________________________________ */
+body {
+  font-family: 'Abel', sans-serif;
+  font-size: 1.5em;
+  color:#000;
+}
+
+h2 {
+  font-family: 'Poppins';
+  font-size: 3em;
+  margin: 0.67em;
+}
+h2.bio {
+  color:#3f7f7c;
+}
+p.bio {
+  color: #fff;
+}
+
+/* Header and Navigation
+______________________________________ */
+header.main_nav {
+  padding: 0 0;
+  display: block;
+  color: #000;
+}
+.logo {
+  margin: 1% auto;
+  text-align: center;
+}
+.logo a{
+  font-size: 3em;
+  color: #fff;
+  text-decoration: none;
+  border-style: solid;
+  border-color: white;
+  border-radius: 5px;
+  padding: 2px 10px 0px 10px;
+  margin:0;
+}
+
+/* Images and Media
+______________________________________ */
+
+img {
+  max-width: 100%;
+}
+img.avatar {
+  border-radius: 400px;
+  border: 4px solid #fff;
+}
+img:hover {
+  opacity:0.8;
+}
+
+/* Footer
+______________________________________ */
+ul.social {
+  display: block;
+  margin: 5% 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+ul.social li {
+  font-size: 3em;
+  display: inline;
+  padding: 0 2%;
+
+}
+
+ul.social li a {
+  color: #666;
+}
+
+ul.social li.facebook a:hover{color:rgb(59,89,152);}
+ul.social li.twitter a:hover{color:rgb(0,172,237);}
+ul.social li.instagram a:hover{color:rgb(81,127,237);}
+ul.social li.youtube a:hover{color:rgb(187,0,0);}
+ul.social li.linkedin a:hover{color:rgb(0,123,182);}
+
+p.copyright {
+  text-align: center;
+  color: #666;
+  font-size: 1em;
+}
+/* Media Queries
+______________________________________ */
