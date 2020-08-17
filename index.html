@@ -25,6 +25,8 @@
   <link href="fonts/font-awesome/css/fontawesome.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/solid.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/brands.css" rel="stylesheet">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -33,78 +35,62 @@
 </head>
 <body>
 
-  <header class="main_nav black">
-    <div class="container">
+  <header class="main_nav">
+    <div class="bg-img">
+    <div class="nav" id="navbar">
       <div class="twelve columns">
-        <div class="logo"><a href="#">Nate जोस</a></div>
+        <ul>
+          <li class="subheads"><a href="#">Music</a></li>
+          <li class="subheads"><a href="#">Code</a></li>
+          <li class="logo topnav-centered"><a href="#">Nate जोस</a></li>
+          <li class="subheads"><a href="#">Services</a></li>
+          <li class="subheads"><a href="#">Contact</a></li>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        </ul>
       </div>
     </div>
+  </div>
   </header>
 
   <div class="container main">
     <div class="row">
-      <div class="four columns portfolio">
-        <img src="images/backpacker.jpg"/>
+      <div class="row">
+      <h1>Hi! Welcome to my personal portfolio page</h1>
       </div>
-      <div class="four columns portfolio">
-        <img src="images/desert_cycle.jpg"/>
-      </div>
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
+    </div>
     </div>
 
     <div class="row">
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
     </div>
 
     <div class="row">
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
-      <div class="four columns portfolio">
-        <img src="images/italy_bikes.jpg"/>
-      </div>
     </div>
   </div><!--Container-->
 
-<div class="row green">
-  <div class="container">
-    <div class="four columns"></div>
-      <img class="avatar" src="images/amy.jpg"/>
-    <div class="eight columns"></div>
-      <h2 class="bio">Nate Jose</h2>
-      <p class="bio">Hi, I'm Nathan Jose and I love music, problem solving and food.</p>
-  </div>
-</div><!--Row Green-->
+
 
 <footer>
   <div class="container">
-    <div class="row twelve columns"></div>
+    <div class="row twelve columns">
       <ul class="social">
         <li class="facebook"><a href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
         <li class="twitter"><a href="#"><i class="fab fa-twitter-square fa-lg"></i></a></li>
         <li class="instagram"><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
         <li class="youtube"><a href="#"><i class="fab fa-youtube-square fa-lg"></i></a></li>
-        <li class="linkedin"><a href="#"><i class="fab fa-linkedin-square fa-lg"></i></a></li>
-
+        <li class="linkedin"><a href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
+        <li class="github"><a href="#"><i class="fab fa-github fa-lg"></i></a></li>
       </ul>
-    <div class="row twelve columns"></div>
+    </div>
+    <div class="row twelve columns">
       <p class="copyright">&copy; 2020 Nate Jose. All Rights Reserved.</p>
+    </div>
   </div>
 </footer>
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<script src="jquery-3.5.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scroll.js"></script>
+<script src="js/hamburgermenu.js"></script>
 </body>
 </html>
