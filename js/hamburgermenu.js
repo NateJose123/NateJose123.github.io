@@ -1,9 +1,14 @@
-/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
-function myFunction() {
-  var x = document.getElementById("navbar");
-  if (x.className === "nav") {
-    x.className += " responsive";
-  } else {
-    x.className = "nav";
-  }
+const hambutton = document.querySelector("#hamicon");
+const hamoverlay = document.querySelector("#hamenuitems");
+const hamsubs = document.querySelectorAll(".hamsubmenu");
+
+function openMenu(){
+  hambutton.classList.toggle("active");
+  hamoverlay.classList.toggle("active");
+  for (var i=0; i<4; i++) {
+    hamsubs[i].classList.toggle("active");
+   
+  } 
 }
+
+hambutton.onclick = openMenu;

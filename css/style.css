@@ -11,6 +11,8 @@ ______________________________________ */
 /* General Content
 ______________________________________ */
 
+
+
 html {  /* The image used */
   background-image: url("/images/webpic3.JPG");
   min-height: 380px;
@@ -23,9 +25,11 @@ html {  /* The image used */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
 
-.main{padding-top: 3%; background-color: transparent;}
+
+.main{padding-top: 0%; background-color: transparent;}
 .row{padding: 2% 0; background-color: transparent;}
 
 /* Typography
@@ -42,7 +46,7 @@ h2 {
   margin: 0.67em;
 }
 
-.container {
+.containerLP {
   list-style: none;
   background: none;
   text-align: center;
@@ -53,21 +57,16 @@ h2 {
 /* Header and Navigation
 ______________________________________ */
 header.main_nav {
-  padding: 0 0;
   display: block;
   color: transparent;
 }
 
-.nav .icon {
-  display: none;
-}
-
 #navbar{
-  position: fixed;
   text-align: center;
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
   transition: ease-in-out 0.5s;
+  margin-top: -30px;
   /*padding-left: 1.5em;*/
 }
 
@@ -79,7 +78,7 @@ li.subheads a{
   text-decoration: none;
   color: white;
   padding: 2rem;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   transition: 0.5s;
 }
 
@@ -88,18 +87,18 @@ li.subheads a:hover{
 }
 
 .logo {
-  margin: 1% auto;
+  margin: 0% auto;
   text-align: center;
 }
 
 .logo a{
-  font-size: 3em;
+  font-size: 2.5em;
   color: #fff;
   text-decoration: none;
   border-style: solid;
   border-color: white;
   border-radius: 5px;
-  padding: 2px 2rem 0px 2rem;
+  padding: 0px 2rem 0px 2rem;
   margin:0;
   opacity: 100;
   -webkit-transition: ease-in 1s;
@@ -113,34 +112,115 @@ li.subheads a:hover{
 }
 
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 900px) {
-  .nav a:not(:first-child) {display: none;}
-  .nav a.icon {
-    float: right;
-    display: block;
+/* Hamburger Menu
+_____________________________________ */
+#hamicon {
+  position: relative;
+  display: block;
+  background: transparent;
+  visibility: hidden;
+  border: none;
+  width: auto;
+	height: 1.5em;
+  margin-right: 2em;
+  float: right;
+  margin-top: -5em;
+}
+
+#hamicon .line {
+	display: block;
+	background: rgb(231, 231, 231);
+	width: 2em;
+	height: 0.15em;
+	position: absolute;
+	left: 0;
+	border-radius: 0.1em;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  z-index: 100;
+}
+
+#hamicon .line.line-1 {
+	top: 0;
+}
+
+#hamicon .line.line-2 {
+	top: 50%;
+}
+
+#hamicon .line.line-3 {
+  top: 100%;
+}
+
+#hamicon:hover .line, #hamburger-icon:focus .line {
+	background: #fff;
+}
+
+#hamicon.active .line-1 {
+	transform: translateY(0.75em) translateX(0) rotate(45deg);
+	-webkit-transform: translateY(0.75em) translateX(0) rotate(45deg);
+  -moz-transform: translateY(0.75em) translateX(0) rotate(45deg);
+  background-color: black;
+}
+
+#hamicon.active .line-2 {
+	opacity: 0;
+}
+
+#hamicon.active .line-3 {
+	transform: translateY(-0.75em) translateX(0) rotate(-45deg);
+	-webkit-transform: translateY(-0.75em) translateX(0) rotate(-45deg);
+  -moz-transform: translateY(-0.75em) translateX(0) rotate(-45deg);
+  background-color: black;
+}
+
+#hamenuitems {
+  visibility: hidden;
+  min-height: 100vmax;
+	position:fixed;
+	top:0;
+	height:100%;
+	width:100%;
+  overflow:auto;
+  z-index:99;
+  transition: ease-in-out 1s;
+	-webkit-transition: ease-in-out 0.4s;
+  -moz-transition: ease-in-out 0.4s;
+}
+
+#hamenuitems.active {  
+
+  visibility: visible;
+  background: rgb(100%,100%,100%, 1);
+}
+
+.hamsubmenu {  
+  visibility: hidden;
+  text-decoration: none;
+  padding: 2rem;
+  font-size: 2.25rem;
+  color: black;
+  transition: ease-in-out 0.5s;
+	-webkit-transition: ease-in-out 0.4s;
+  -moz-transition: ease-in-out 0.4s;
+  
+}
+
+.hamsubmenu.active {
+  visibility: visible;
+}
+
+@media screen and (max-width: 940px) {
+  li.subheads a {
     position: fixed;
-    padding-right: 5vw;
-    padding-top: 3vw;
-    font-size: 2em;
+    bottom: -1000px;
+
+  }
+  #hamicon {
+    visibility: visible;
   }
 }
-
-/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 900px) {
-  .nav.responsive {position: relative;}
-  .nav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .nav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-}
-
 
 /* Images and Media
 ______________________________________ */
@@ -164,10 +244,11 @@ ul.social {
   margin-left: 0;
   list-style-type: none;
   text-align: center;
+  padding-bottom: -2rem;
 }
 
 ul.social li {
-  font-size: 2em;
+  font-size: 1em;
   display: inline;
   padding: 1%;
 
@@ -175,6 +256,7 @@ ul.social li {
 }
 
 ul.social li a {
+  padding: -10% 0 -20% 0;
   color:white;
   transition: ease-in 1s;
   -webkit-transition: ease-in 1s;
@@ -185,14 +267,15 @@ ul.social li.facebook a:hover{color:rgb(59,89,152);  -webkit-transition: ease-ou
 ul.social li.twitter a:hover{color:rgb(0,172,237);  -webkit-transition: ease-out 0.5s;}
 ul.social li.instagram a:hover{color:rgb(81,127,237);  -webkit-transition: ease-out 0.5s;}
 ul.social li.youtube a:hover{color:rgb(187,0,0);  -webkit-transition: ease-out 0.5s;}
-ul.social li.github a:hover{color:rgb(0,0,0);  -webkit-transition: ease-out 0.5s;}
+ul.social li.github a:hover{color:rgb(150, 3, 3);  -webkit-transition: ease-out 0.5s;}
 ul.social li.linkedin a:hover{color:rgb(0,123,182);  -webkit-transition: ease-out 0.5s;}
 
 
 p.copyright {
   text-align: center;
   color: white;
-  font-size: 1em;
+  font-size: 0.5em;
+  margin-top: -10px;
 }
 /* Media Queries
 ______________________________________ */
