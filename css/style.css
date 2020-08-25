@@ -14,7 +14,7 @@ ______________________________________ */
 
 
 html {  /* The image used */
-  background-image: url("/images/webpic3.JPG");
+  background-image: url("https://imgur.com/Xw1Qwb5.jpg");
   min-height: 380px;
   position:relative;
   top:0;
@@ -89,7 +89,7 @@ li.subheads a:hover{
 .logo {
   display: inline-block;
   margin: 1% auto;
-  align-self: center;
+  text-align: center;
 }
 
 .logo a{
