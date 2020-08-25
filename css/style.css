@@ -16,7 +16,7 @@ ______________________________________ */
 html {  /* The image used */
   background-image: url("/images/webpic3.JPG");
   min-height: 380px;
-  position:absolute;
+  position:relative;
   top:0;
   bottom:0;
   right:0;
@@ -87,8 +87,9 @@ li.subheads a:hover{
 }
 
 .logo {
-  margin: 0% auto;
-  text-align: center;
+  display: inline-block;
+  margin: 1% auto;
+  align-self: center;
 }
 
 .logo a{
@@ -97,7 +98,7 @@ li.subheads a:hover{
   text-decoration: none;
   border-style: solid;
   border-color: white;
-  border-radius: 5px;
+  border-radius: 0.25em;
   padding: 0px 2rem 0px 2rem;
   margin:0;
   opacity: 100;
@@ -114,22 +115,23 @@ li.subheads a:hover{
 
 /* Hamburger Menu
 _____________________________________ */
+.hamposition {
+
+}
 #hamicon {
-  position: relative;
-  display: block;
   background: transparent;
   visibility: hidden;
   border: none;
-  width: auto;
-	height: 1.5em;
-  margin-right: 2em;
-  float: right;
-  margin-top: -5em;
+  z-index: 100; 
+  position: absolute;
+  top: 3%;
+  left: 85%;
+  padding:15px;
+
 }
 
 #hamicon .line {
-	display: block;
-	background: rgb(231, 231, 231);
+  background: rgb(231, 231, 231);
 	width: 2em;
 	height: 0.15em;
 	position: absolute;
@@ -216,6 +218,14 @@ _____________________________________ */
     position: fixed;
     bottom: -1000px;
 
+  }
+
+  .logo a{
+    font-size: 2em;
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    
   }
   #hamicon {
     visibility: visible;

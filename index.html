@@ -11,7 +11,8 @@
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0"/>-->
 
     <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -37,9 +38,13 @@
 
 <!----------------------Header------------------------------>
   <header class="main_nav">
+    <div class="hamburgermenu">
+
+    </div>
     <div class="bg-img">
     <div class="row nav" id="navbar">
       <div class="col s12 .left-align">
+
         <ul>
           <li class="subheads"><a href="#">Music</a></li>
           <li class="subheads"><a href="#">Code</a></li>
@@ -53,19 +58,19 @@
   </header>
 
   <!-----------------Hamburger Menu--------------------------->
-  <div class="hamburgermenu">
+  <div class="hamposition col s12">
     <button id="hamicon" class="">
       <span class="line line-1"></span>
       <span class="line line-2"></span>
       <span class="line line-3"></span>
     </button>
+  </div>
     <div class="col s12" id="hamenuitems">
       <a href="#" class="hamsubmenu">Music</a>
       <a href="#" class="hamsubmenu">Code</a>
       <a href="#" class="hamsubmenu">Services</a>
       <a href="#" class="hamsubmenu">Contact</a>
     </div>
-  </div>
   
 <!-----------------Landing Page Content--------------------->
   <div class="containerLP main">
