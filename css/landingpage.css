@@ -1,0 +1,84 @@
+/* Table of Contents
+______________________________________
+-General
+-Opening Intro Text
+-Typography
+-Header and Navigation
+-Images and Media
+-Footer
+-Media Queries
+______________________________________ */
+
+/* General
+______________________________________ */
+.containerLP {
+  list-style: none;
+  background: none;
+  text-align: center;
+  margin-top: 6em;
+}
+
+/* Opening Intro Text
+______________________________________ */
+
+
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+#introtext {
+  position: relative;
+  display: block;
+  text-align: center;
+	margin: 0;
+	line-height: 1;
+  transform: translateY(6rem);
+  z-index: 1;
+  color: white;
+}
+
+#introtext.active {
+  animation: up 1s forwards;
+  animation-timing-function: ease-in-out;
+  
+}
+
+
+@keyframes up {
+  0%{
+    transform: translateY(10000);
+  }
+	50% {
+    transform: translateY(0);
+    transform: translateX(0rem);
+  }
+  100%{
+    transform: translateX(-20rem);
+  }
+}
+
+
+/* Typography
+______________________________________ */
+
+
+/* Header and Navigation
+______________________________________ */
+
+
+/* Hamburger Menu
+_____________________________________ */
+
+
+/* Images and Media
+______________________________________ */
+
+
+/* Footer
+______________________________________ */
+
+
+/* Media Queries
+______________________________________ */

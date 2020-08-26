@@ -22,6 +22,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/landingpage.css">
   <link href="fonts/font-awesome/css/fontawesome.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/solid.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/brands.css" rel="stylesheet">
@@ -72,25 +73,28 @@
 
 <!-----------------Landing Page Content--------------------->
 <main role="main">
-  <div class="containerLP main">
-    <div class="row">
-      <div class="row .center-align">
-      <h1>Hi! Welcome to my personal portfolio page.</h1>
-      </div>
-    </div>
-    </div>
 
     <div class="row">
-      <p>
-        
+      <p> 
       </p>
     </div>
 
-      
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
 
-    <div class="row">
-    </div>
-  </div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+    <div class="row dummydivs"></div>
+
+      <div class="intro row">
+        <h1 id="introtext" class="">Dream.</h1>
+      </div>	
+      
+  
 </main>
 
 
@@ -121,7 +125,6 @@
 <script src="js/hamburgermenu.js"></script>
 <script src="js/scroll.js"></script>
 <script>
-
   $(window).scroll(function(){
     var scroll = $(window).scrollTop();
     $(".bg-img").css({
@@ -131,6 +134,56 @@
       filter: "blur("+(scroll/10)+"px)",
     });
   });
+</script>
+
+<script>
+// The checker
+const gambitGalleryIsInView = el => {
+	const scroll = window.scrollY || window.pageYOffset
+	const boundsTop = el.getBoundingClientRect().top + scroll
+	
+	const viewport = {
+		top: scroll,
+		bottom: scroll + window.innerHeight,
+	}
+	
+    const bounds = {
+		top: boundsTop,
+		bottom: boundsTop + el.clientHeight,
+	}
+	
+	return ( bounds.bottom >= viewport.top && bounds.bottom <= viewport.bottom ) 
+		|| ( bounds.top <= viewport.bottom && bounds.top >= viewport.top );
+}
+
+
+// Usage.
+document.addEventListener( 'DOMContentLoaded', () => {
+	const tester = document.querySelector( '#introtext' )
+	
+	const handler = () => raf( () => {
+		if(gambitGalleryIsInView( tester )) {
+      tester.classList.toggle("active");
+      window.removeEventListener( 'scroll', handler )
+      console.log("true")
+    }
+    else {
+      console.log("false")
+    }
+	} )
+	
+	handler()
+	window.addEventListener( 'scroll', handler )
+} )
+
+// requestAnimationFrame
+const raf = 
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    function( callback ) {
+        window.setTimeout( callback, 1000 )
+    }
 </script>
 
 </body>
