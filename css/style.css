@@ -11,24 +11,6 @@ ______________________________________ */
 /* General Content
 ______________________________________ */
 
-
-
-html {  /* The image used */
-  background-image: url("https://imgur.com/Xw1Qwb5.jpg");
-  min-height: 380px;
-  position:relative;
-  top:0;
-  bottom:0;
-  right:0;
-  left:0;
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-}
-
-
 .main{padding-top: 0%; background-color: transparent;}
 .row{padding: 2% 0; background-color: transparent;}
 
@@ -115,9 +97,7 @@ li.subheads a:hover{
 
 /* Hamburger Menu
 _____________________________________ */
-.hamposition {
 
-}
 #hamicon {
   background: transparent;
   visibility: hidden;
@@ -235,6 +215,21 @@ _____________________________________ */
 /* Images and Media
 ______________________________________ */
 
+.bg-img {
+/* The image used */
+background-image: url("/images/webpic3.JPG");
+position: static;
+top:0;
+bottom:0;
+right:0;
+left:0;
+/*Center and scale the image nicely */
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+background-color: black;
+z-index: 1;
+}
 img {
   max-width: 100%;
 }
@@ -249,6 +244,10 @@ img:hover {
 
 /* Footer
 ______________________________________ */
+
+footer{
+  z-index: 99;
+}
 ul.social {
   display: inline-flexbox;
   margin-left: 0;

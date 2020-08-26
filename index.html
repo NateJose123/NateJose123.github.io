@@ -22,6 +22,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/zoom.css">
   <link href="fonts/font-awesome/css/fontawesome.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/solid.css" rel="stylesheet">
   <link href="fonts/font-awesome/css/brands.css" rel="stylesheet">
@@ -35,27 +36,22 @@
   
 </head>
 <body>
-
+  <div class="bg-img">
 <!----------------------Header------------------------------>
   <header class="main_nav">
-    <div class="hamburgermenu">
-
-    </div>
-    <div class="bg-img">
+ 
     <div class="row nav" id="navbar">
       <div class="col s12 .left-align">
-
         <ul>
           <li class="subheads"><a href="#">Music</a></li>
-          <li class="subheads"><a href="#">Code</a></li>
-          <li class="logo topnav-centered"><a href="#">Nate जोस</a></li>
           <li class="subheads"><a href="#">Services</a></li>
+          <li class="logo topnav-centered"><a href="#">Nate जोस</a></li>
+          <li class="subheads"><a href="#">Code</a></li>
           <li class="subheads"><a href="#">Contact</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  </header>
+</header>
 
   <!-----------------Hamburger Menu--------------------------->
   <div class="hamposition col s12">
@@ -73,21 +69,38 @@
     </div>
   
 <!-----------------Landing Page Content--------------------->
+<main role="main">
   <div class="containerLP main">
     <div class="row">
       <div class="row .center-align">
-      <h1>Hi! Welcome to my personal portfolio page</h1>
+      <h1>Hi! Welcome to my personal portfolio page.</h1>
+      <p>
+
+        However, sitarist Ravi Shankar is almost single-handedly responsible for popularizing Indian music in the West, in part through his brilliant showmanship and ease performing for Western audiences, and in part because of his association with George Harrison of the Beatles. The Beatles included sitar (and tabla) in some of their songs, most famously the sitar melody in Norwegian Wood, played by Harrison himself, who studied with Shankar in 1966.
+
+By that time Shankar was performing for large audiences in concert halls and at major music festivals, including the famous Monterey (California) pop festival of 1967, and was almost a pop icon himself. The hypnotic buzzing sound of his sitar, rich in overtones, was a natural acoustic ally of the electric guitar sounds of that era.
+
+The highly expressive melodies and extended improvisations played by Shankar and his longtime tabla player Alla Rakha were a good fit with the extended jams of rock groups such as Cream, (who cite Indian music as a direct influence), Jimi Hendrix, The Grateful Dead, The Jefferson Airplane, The Doors, and others. Think of the lyrics to Eric Burdon's song Down in Monterey,
+      </p>
       </div>
     </div>
     </div>
 
     <div class="row">
+      <p>
+        
+      </p>
     </div>
+
+    <div class="video-container">
+      <iframe width="853" height="480" src="//www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder="0" allowfullscreen></iframe>
+    </div>
+      
 
     <div class="row">
     </div>
   </div>
-
+</main>
 
 
 <footer>
@@ -107,13 +120,27 @@
     </div>
 
   </div>
+</div>
 </footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <script type="text/javascript" src="js/bin/materialize.min.js"></script>
+<script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script src="js/hamburgermenu.js"></script>
 <script src="js/scroll.js"></script>
+<script>
+
+  $(window).scroll(function(){
+    var scroll = $(window).scrollTop();
+    $(".bg-img").css({
+      width: (100+scroll/0.9)+"%",
+      top: -(scroll/10)+"%",
+      "-webkit-filter": "blur("+(scroll/200)+"px)",
+      filter: "blur("+(scroll/1)+"px)"
+    });
+  });
+</script>
 
 </body>
 </html>
