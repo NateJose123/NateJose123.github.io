@@ -10,6 +10,9 @@ ______________________________________ */
 
 /* General Content
 ______________________________________ */
+html{
+  background-color: black;
+}
 
 .main{padding-top: 0%; background-color: transparent;}
 .row{padding: 2% 0; background-color: transparent;}
@@ -216,19 +219,19 @@ _____________________________________ */
 ______________________________________ */
 
 .bg-img {
-/* The image used */
-background-image: url("/images/webpic3.JPG");
-position: static;
-top:0;
-bottom:0;
-right:0;
-left:0;
-/*Center and scale the image nicely */
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-background-color: black;
-z-index: 1;
+  background-image: url("/images/webpic3.JPG");
+  position: absolute;
+  /* The image used */
+  top:0;
+  bottom:0;
+  right:0;
+  left:0;
+  /*Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+  z-index: -1;
 }
 img {
   max-width: 100%;
