@@ -18,6 +18,7 @@ ______________________________________ */
   margin-top: 6em;
 }
 
+
 /* Opening Intro Text
 ______________________________________ */
 
@@ -33,10 +34,12 @@ body {
   display: block;
   text-align: center;
 	margin: 0;
-	line-height: 1;
-  transform: translateY(6rem);
+  line-height: 1;
+  font-size: 15vw;
+  transform: translateY(10vh);
   z-index: 1;
   color: white;
+  width: 100%;
 }
 
 #introtext.active {
@@ -45,20 +48,80 @@ body {
   
 }
 
+#introtext1 {
+  position: relative;
+  display: block;
+  text-align: center;
+	margin: 0;
+	line-height: 1;
+  transform: translateY(10vh);
+  z-index: 1;
+  font-size: 5vw;
+  color: white;
+  width: 100%;
+}
+
+#introtext1.active {
+  animation: up 1s forwards;
+  animation-delay: 1s;
+  animation-timing-function: ease-in-out;
+  
+}
+
+#introtext2 {
+  position: relative;
+  display: block;
+  text-align: center;
+	margin: 0;
+	line-height: 1;
+  transform: translateY(10vh);
+  z-index: 1;
+  font-size: 3vw;
+  color: white;
+  width: 100%;
+}
+
+#introtext2.active {
+  animation: up 1s forwards;
+  animation-delay: 2s;
+  animation-timing-function: ease-in-out;
+  
+}
+
 
 @keyframes up {
   0%{
-    transform: translateY(10000);
-  }
-	50% {
-    transform: translateY(0);
-    transform: translateX(0rem);
+    transform: translateY(9);
   }
   100%{
-    transform: translateX(-20rem);
+    transform: translateY(0);
   }
 }
 
+.constructionarrow {
+  color: white;
+  font-size: 10vw;
+  background: transparent;
+  border: none;
+  top: 5%;
+  transition: ease-in-out 1s;
+  animation: arrowanimate 3s forwards;
+  animation-name: arrowanimate;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes arrowanimate {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 100;
+  }
+  100%{
+    opacity: 0;
+  }
+}
 
 /* Typography
 ______________________________________ */

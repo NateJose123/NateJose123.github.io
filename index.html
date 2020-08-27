@@ -87,12 +87,16 @@
 
     <div class="row dummydivs"></div>
     <div class="row dummydivs"></div>
-    <div class="row dummydivs"></div>
-    <div class="row dummydivs"></div>
 
-      <div class="intro row">
-        <h1 id="introtext" class="">Dream.</h1>
+
+      <div class=" row col s12 containerLP">
+      <div class="intro">
+        <h1 id="introtext" class="">Coming Soon</h1>
+        <h2 id="introtext1" class="">Come back on September 15th!</h2>
+        <h3 id="introtext2" class="">Until then, stay in touch via my socials below</h3>
+        <button class="constructionarrow"><i class="fas fa-arrow-down"></i></button>
       </div>	
+    </div>
       
   
 </main>
@@ -102,9 +106,9 @@
   <div class="containerLP">
     <div class="row col s12">
       <ul class="social">
-        <li class="facebook"><a href="#"><i class="fab fa-facebook fa-lg"></i></a></li>
-        <li class="twitter"><a href="#"><i class="fab fa-twitter-square fa-lg"></i></a></li>
-        <li class="instagram"><a href="#"><i class="fab fa-instagram fa-lg"></i></a></li>
+        <li class="facebook"><a href="https://www.facebook.com/nathan.jose.5/"><i class="fab fa-facebook fa-lg"></i></a></li>
+        <li class="twitter"><a href="https://twitter.com/NathanSamJose"><i class="fab fa-twitter-square fa-lg"></i></a></li>
+        <li class="instagram"><a href="https://www.instagram.com/n8.jose/"><i class="fab fa-instagram fa-lg"></i></a></li>
         <li class="youtube"><a href="#"><i class="fab fa-youtube-square fa-lg"></i></a></li>
         <li class="linkedin"><a href="#"><i class="fab fa-linkedin fa-lg"></i></a></li>
         <li class="github"><a href="#"><i class="fab fa-github fa-lg"></i></a></li>
@@ -159,11 +163,15 @@ const gambitGalleryIsInView = el => {
 
 // Usage.
 document.addEventListener( 'DOMContentLoaded', () => {
-	const tester = document.querySelector( '#introtext' )
+  const tester = document.querySelector( '#introtext' )
+  const tester1 = document.querySelector( '#introtext1' )
+  const tester2 = document.querySelector( '#introtext2' )
 	
 	const handler = () => raf( () => {
 		if(gambitGalleryIsInView( tester )) {
       tester.classList.toggle("active");
+      tester1.classList.toggle("active");
+      tester2.classList.toggle("active");
       window.removeEventListener( 'scroll', handler )
       console.log("true")
     }

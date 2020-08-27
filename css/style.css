@@ -25,9 +25,6 @@ body {
   color:#000;
 }
 
-
-
-
 /* Header and Navigation
 ______________________________________ */
 header.main_nav {
@@ -96,7 +93,7 @@ _____________________________________ */
   border: none;
   z-index: 100; 
   position: absolute;
-  top: 3%;
+  top: 4%;
   left: 85%;
   padding:15px;
 
@@ -170,19 +167,31 @@ _____________________________________ */
 }
 
 .hamsubmenu {  
+  display: block;
+  margin: 5% auto;
+  text-align: center;
   visibility: hidden;
   text-decoration: none;
-  padding: 2rem;
-  font-size: 2.25rem;
-  color: black;
-  transition: ease-in-out 0.5s;
-	-webkit-transition: ease-in-out 0.4s;
-  -moz-transition: ease-in-out 0.4s;
+  font-size: 2.5em;
+  color: #000;
+  padding-top: 30px;
   
+}
+
+.hamsubmenu a {
+
+  text-decoration: none;
+  padding: 0 2rem 0px 2rem;
+  margin:25vw;
+  opacity: 100;
+  list-style: none;
+  -webkit-transition: ease-in 1s;
 }
 
 .hamsubmenu.active {
   visibility: visible;
+  overflow: hidden;
+
 }
 
 @media screen and (max-width: 940px) {
@@ -202,6 +211,7 @@ _____________________________________ */
   #hamicon {
     visibility: visible;
   }
+
 }
 
 /* Images and Media
@@ -220,6 +230,7 @@ ______________________________________ */
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
+  max-width: 100%;
   z-index: -1;
 }
 
