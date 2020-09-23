@@ -275,7 +275,7 @@ ul.social li.linkedin a:hover{color:rgb(0,123,182);  -webkit-transition: ease-ou
 
 p.copyright {
   text-align: center;
-  color: white;
+  color: red;
   font-size: 0.5em;
   margin-top: -10px;
 }
