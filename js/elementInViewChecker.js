@@ -43,6 +43,26 @@ document.addEventListener( 'DOMContentLoaded', () => {
 	window.addEventListener( 'scroll', handler )
 } )
 
+
+// Usage #2.
+document.addEventListener( 'DOMContentLoaded', () => {
+  const tester = document.querySelector( '#resume' )
+	
+	const handler = () => raf( () => {
+		if(gambitGalleryIsInView( tester )) {
+      tester.classList.toggle("active");
+      window.removeEventListener( 'scroll', handler )
+      console.log("true")
+    }
+    else {
+      console.log("false")
+    }
+	} )
+	
+	handler()
+	window.addEventListener( 'scroll', handler )
+} )
+
 // requestAnimationFrame
 const raf = 
     window.requestAnimationFrame ||

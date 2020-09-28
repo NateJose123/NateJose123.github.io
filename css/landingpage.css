@@ -80,7 +80,12 @@ ______________________________________ */
 /* Opening Intro Text
 ______________________________________ */
 
-
+.tagline {
+  font-family: 'Righteous', sans-serif;
+  font-size: 5vw;
+  text-align: center;
+  color:  rgb(252, 137, 137);
+}
 
 body {
 	-webkit-font-smoothing: antialiased;
@@ -218,43 +223,9 @@ body {
   }
 }
 
-#introp2 {
-  visibility: hidden;
-  position: relative;
-  padding-top: 5%;
-  display: inline;
-  text-align: left;
-  line-height: 1;
-  font-size: 2vw;
-  transform: translateY(0vh);
-  z-index: 1;
-  color: black;
-  width: 100%;
-}
-
-#introp2.active {
-  animation: appear 2s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in;
-  animation-delay: 3s;
-  visibility: visible;
-}
-
-@keyframes appear {
-  0%{
-    opacity: 0;
-    color: white;
-  }
-  100%{
-    opacity: 1;
-    color: white;
-  }
-}
-
 /* Typography
 ______________________________________ */
 #skillheading {
-  visibility: hidden;
   position: relative;
   display: block;
   line-height: 1;
@@ -296,9 +267,58 @@ transition: ease-in;
 
 
 
-/* Header and Navigation
+/* Resume Button
 ______________________________________ */
 
+#resume {
+  display: inline-block;
+  margin: 1% auto;
+  text-align: center; 
+  visibility: hidden;
+  color: black;
+}
+
+#resume.active a{
+  visibility: visible;
+  animation: fadeInResume 2s;
+  animation-delay: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  transition: ease-in;
+  }
+  
+  @keyframes fadeInResume {
+    0%{
+      opacity: 0;
+      color: white;
+      border-color: white;
+    }
+    100% {
+      opacity: 1;
+      color: white;
+      border-color: rgb(220, 189, 164);
+    }
+  }
+
+#resume a{
+  font-size: 2em;
+  color: black;
+  text-decoration: none;
+  border-style: solid;
+  border-color: black;
+  border-radius: 0.25em;
+  padding: 0px 2rem 0px 2rem;
+  margin:0;
+  opacity: 100;
+  -webkit-transition: ease-in 1s;
+
+}
+
+#resume a:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: ease-out 0.5s;
+}
 
 /* Hamburger Menu
 _____________________________________ */
@@ -306,6 +326,13 @@ _____________________________________ */
 
 /* Images and Media
 ______________________________________ */
+
+.introvid{
+position: relative;
+z-index: -1;
+width: 100vw;
+}
+
 
 
 /* Footer
