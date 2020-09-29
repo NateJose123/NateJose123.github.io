@@ -17,6 +17,7 @@ html{
   background-color: black;
 }
 
+
 .main{padding-top: 0%; background-color: transparent;}
 .row{padding: 2% 0; background-color: transparent;}
 
@@ -26,6 +27,7 @@ body {
   font-family: 'Abel', sans-serif;
   font-size: 1.5em;
   color:#000;
+  overflow-x: hidden !important;
 }
 
 /* Header and Navigation
