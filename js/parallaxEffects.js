@@ -5,6 +5,6 @@ $(window).scroll(function(){
     top: -(scroll/20)+"%",
     "-webkit-filter": "blur("+(scroll/100)+"px)",
     filter: "blur("+(scroll/10)+"px)",
-    opacity: 70/scroll,
+    opacity: 50/scroll,
   });
 });

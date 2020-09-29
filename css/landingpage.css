@@ -91,7 +91,8 @@ ______________________________________ */
   font-size: 5vw;
   text-align: center;
   color:  rgb(252, 137, 137);
-  z-index: -1;
+  position: relative;
+  z-index: 2;
 }
 
 body {
@@ -110,7 +111,7 @@ body {
   font-size: 5vw;
   transform: translateY(0vh);
   z-index: 1;
-  color: black;
+  color: white;
   width: 100%;
 }
 
@@ -141,7 +142,7 @@ body {
   font-size: 7vw;
   transform: translateY(0vh);
   z-index: 1;
-	color: black;
+	color: transparent;
   width: 100%;
 }
 
@@ -207,7 +208,7 @@ body {
   font-size: 5vw;
   transform: translateY(0vh);
   z-index: 1;
-  color: black;
+  color: transparent;
   width: 100%;
 }
 
@@ -222,88 +223,16 @@ body {
 @keyframes appear {
   0%{
     opacity: 0;
-    color: rgb(197, 197, 188);
+    color: white;
   }
   100%{
     opacity: 1;
-    color: rgb(197, 197, 188);
+    color: white;
   }
 }
 
 /* Typography
 ______________________________________ */
-#skillheading {
-  position: relative;
-  display: block;
-  line-height: 1;
-  font-size: 10vw;
-  z-index: 1;
-  color: white;
-  width: 100%;
-  margin-top: -10%;
-}
-
-#skillheading.active {
-visibility: visible;
-animation: fadeInSkills 2s;
-animation-direction: normal;
-animation-fill-mode: forwards;
-transition: ease-in;
-}
-
-@keyframes fadeInSkills {
-  0%{
-    opacity: 0;
-    transform: translateY(-0%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(-25%);
-  }
-}
-
-.fa-code, .fa-guitar, .fa-volume-up, .fa-cube{
-  color: white;
-  padding: 5% 5% 20% 5%;
-}
-
-
-.web, .music, .code, .prod {
-  border-style: solid;
-  border-color: white;
-  border-radius: 0.25em;
-  padding: 5% 5% 5% 5%;
-  size: 50%;
-  margin-left: 5%;
-}
-
-
-#webskill, #musicskill, #codingskill, #productionskill{
-  position: relative;
-  display: inline-block;
-  line-height: 1;
-  font-size: 7vw;
-  z-index: 1;
-  color: white;
-  width: 100%;
-  margin-top: -10%;
-}
-#productionskill {
-  font-size: 5vw;
-}
-
-#webskillp, #musicskillp, #codingskillp,#productionskillp {
-  position: relative;
-  display: inline-block;
-  line-height: 1;
-  font-size: 3vw;
-  z-index: 1;
-  color: white;
-  width: 100%;
-  margin-top: 10%;
-  border: white;
-  border-radius: 20%;
-}
 
 
 
@@ -343,13 +272,13 @@ ______________________________________ */
   }
 
 #resume.active a{
-  font-size: 2em;
-  color: black;
+  font-size: 4vw;
+  color: transparent;
   text-decoration: none;
   text-align: center;
   border-style: solid;
-  border-radius: 0.25em;
-  padding: 0px 2rem 0px 2rem;
+  border-radius: 0.5vw;
+  padding: 0px 1vw 0px 1vw; 
   margin:0;
   opacity: 100;
   -webkit-transition: ease-in-out 1s;
@@ -374,6 +303,19 @@ position: relative;
 z-index: -1;
 width: 100vw;
 }
+
+
+.introbgimage{
+  background-image: url(/images/webpic2.JPG);
+  position: relative;
+  float: bottom;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
+
+}
+
 
 
 
