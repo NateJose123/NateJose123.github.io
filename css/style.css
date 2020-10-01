@@ -90,7 +90,7 @@ li.subheads a:hover{
 
 .logo a:hover {
   background-color: white;
-  color: black;
+  color: rgb(252, 137, 137);
   -webkit-transition: ease-out 0.5s;
   z-index: 2;
 }
@@ -99,16 +99,25 @@ li.subheads a:hover{
 /* Hamburger Menu
 _____________________________________ */
 
+.hamenu {
+  overflow-y: hidden !important;
+}
+
 #hamicon {
   background: transparent;
-  visibility: hidden;
   border: none;
   z-index: 100; 
   position: absolute;
   top: 4%;
   left: 85%;
   padding:15px;
+  visibility: hidden;
 
+}
+
+#hamicon.active {
+  position: fixed;
+  visibility: visible;
 }
 
 #hamicon .line {
@@ -185,13 +194,12 @@ _____________________________________ */
   visibility: hidden;
   text-decoration: none;
   font-size: 2.5em;
-  color: #000;
   padding-top: 30px;
   
 }
 
-.hamsubmenu a {
-
+.hamsubmenu li a {
+  color: #000;
   text-decoration: none;
   padding: 0 2rem 0px 2rem;
   margin:25vw;
@@ -202,7 +210,7 @@ _____________________________________ */
 
 .hamsubmenu.active {
   visibility: visible;
-  overflow: hidden;
+  overflow-y: hidden;
 
 }
 
@@ -223,6 +231,7 @@ _____________________________________ */
   #hamicon {
     visibility: visible;
   }
+
 
 }
 

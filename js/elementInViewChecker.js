@@ -24,6 +24,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
   const tester1 = document.querySelector( '#intronameline')
   const tester2 = document.querySelector( '#roles')
   const tester3 = document.querySelector( '#introp1')
+  const tester4 = document.querySelector( '.introbgimage')
 	
 	const handler = () => raf( () => {
 		if(gambitGalleryIsInView( tester )) {
@@ -31,6 +32,7 @@ document.addEventListener( 'DOMContentLoaded', () => {
       tester1.classList.toggle("active");
       tester2.classList.toggle("active");
       tester3.classList.toggle("active");
+      tester4.classList.toggle("active");
       window.removeEventListener( 'scroll', handler )
       console.log("true")
     }

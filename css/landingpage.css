@@ -91,6 +91,7 @@ ______________________________________ */
   font-size: 5vw;
   text-align: center;
   color:  rgb(252, 137, 137);
+  /* margin-top: 30%; */
   position: relative;
   z-index: 2;
 }
@@ -116,7 +117,7 @@ body {
 }
 
 #intronameline.active {
-  animation: appear 2s;
+  animation: appear 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
   visibility: visible;
@@ -148,7 +149,7 @@ body {
 
 #introname.active {
   visibility: visible;
-  animation: appear1 2s;
+  animation: appear1 1s;
   animation-delay: 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
@@ -246,13 +247,13 @@ ______________________________________ */
   margin: 1% auto;
   text-align: center; 
   visibility: hidden;
-  color: black;
+  color: transparent;
 }
 
 #resume.active a{
   visibility: visible;
   animation: fadeInResume 2s;
-  animation-delay: 2s;
+  animation-delay: 0s;
   animation-direction: normal;
   animation-fill-mode: forwards;
   transition: ease-in;
@@ -277,7 +278,8 @@ ______________________________________ */
   text-decoration: none;
   text-align: center;
   border-style: solid;
-  border-radius: 0.5vw;
+  border-width: 0.3vw;
+  border-radius: 3vw;
   padding: 0px 1vw 0px 1vw; 
   margin:0;
   opacity: 100;
@@ -290,6 +292,42 @@ ______________________________________ */
   color: black;
   -webkit-transition: ease-in-out 0.5s;
 }
+
+
+/* Get in touch button
+______________________________________ */
+
+.getintouch {
+  align-items: center;
+  margin: 1% auto;
+  text-align: center; 
+  color: white;
+}
+
+.getintouch a{
+  visibility: visible;
+  transition: ease-in;
+  font-size: 4vw;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-style: solid;
+  border-width: 0.3vw;
+  border-radius: 3vw;
+  padding: 0px 1vw 0px 1vw; 
+  margin:0;
+  opacity: 100;
+  -webkit-transition: ease-in-out 1s;
+  }
+  
+
+
+.getintouch a:hover {
+  background-color: rgb(255, 255, 255, 1);
+  color: black;
+  -webkit-transition: ease-in-out 0.5s;
+}
+
 
 /* Hamburger Menu
 _____________________________________ */
@@ -313,7 +351,24 @@ width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
+  opacity: 0;
 
+}
+
+.introbgimage.active{
+  animation: fadeInBackground 3s;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+}
+
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 
