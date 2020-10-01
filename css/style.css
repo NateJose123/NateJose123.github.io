@@ -10,9 +10,13 @@ ______________________________________ */
 
 /* General Content
 ______________________________________ */
+*{
+  box-sizing: border-box;
+}
 html{
   background-color: black;
 }
+
 
 .main{padding-top: 0%; background-color: transparent;}
 .row{padding: 2% 0; background-color: transparent;}
@@ -23,6 +27,7 @@ body {
   font-family: 'Abel', sans-serif;
   font-size: 1.5em;
   color:#000;
+  overflow-x: hidden !important;
 }
 
 /* Header and Navigation
@@ -30,6 +35,8 @@ ______________________________________ */
 header.main_nav {
   display: block;
   color: transparent;
+  z-index: 2;
+  position: relative;
 }
 
 #navbar{
@@ -38,6 +45,7 @@ header.main_nav {
   width: 100%; /* Full width */
   transition: ease-in-out 0.5s;
   margin-top: -30px;
+  z-index: 2;
   /*padding-left: 1.5em;*/
 }
 
@@ -51,6 +59,7 @@ li.subheads a{
   padding: 2rem;
   font-size: 2.25rem;
   transition: 0.5s;
+  z-index: 2;
 }
 
 li.subheads a:hover{
@@ -61,6 +70,7 @@ li.subheads a:hover{
   display: inline-block;
   margin: 1% auto;
   text-align: center;
+  z-index: 2;
 }
 
 .logo a{
@@ -71,32 +81,43 @@ li.subheads a:hover{
   border-color: white;
   border-radius: 0.25em;
   padding: 0px 2rem 0px 2rem;
-  margin:0;
+  margin: 0;
   opacity: 100;
   -webkit-transition: ease-in 1s;
+  z-index: 2;
 
 }
 
 .logo a:hover {
   background-color: white;
-  color: black;
+  color: rgb(252, 137, 137);
   -webkit-transition: ease-out 0.5s;
+  z-index: 2;
 }
 
 
 /* Hamburger Menu
 _____________________________________ */
 
+.hamenu {
+  overflow-y: hidden !important;
+}
+
 #hamicon {
   background: transparent;
-  visibility: hidden;
   border: none;
   z-index: 100; 
   position: absolute;
   top: 4%;
   left: 85%;
   padding:15px;
+  visibility: hidden;
 
+}
+
+#hamicon.active {
+  position: fixed;
+  visibility: visible;
 }
 
 #hamicon .line {
@@ -173,13 +194,12 @@ _____________________________________ */
   visibility: hidden;
   text-decoration: none;
   font-size: 2.5em;
-  color: #000;
   padding-top: 30px;
   
 }
 
-.hamsubmenu a {
-
+.hamsubmenu li a {
+  color: #000;
   text-decoration: none;
   padding: 0 2rem 0px 2rem;
   margin:25vw;
@@ -190,7 +210,7 @@ _____________________________________ */
 
 .hamsubmenu.active {
   visibility: visible;
-  overflow: hidden;
+  overflow-y: hidden;
 
 }
 
@@ -204,7 +224,7 @@ _____________________________________ */
   .logo a{
     font-size: 2em;
     position: absolute;
-    top: 1%;
+    top: 45%;
     left: 5%;
     
   }
@@ -212,18 +232,19 @@ _____________________________________ */
     visibility: visible;
   }
 
+
 }
 
 /* Images and Media
 ______________________________________ */
 
-.bg-img {
-  background-image: url("/images/webpic3.JPG");
-  position: absolute;
+.bg-img1 {
+  background-image: url("/images/webpic1.jpg");
+  position: fixed;
   /* The image used */
   top:0;
   bottom:0;
-  right:0;
+  right: 0;
   left:0;
   /*Center and scale the image nicely */
   background-position: center;
@@ -231,7 +252,10 @@ ______________________________________ */
   background-size: cover;
   background-color: black;
   max-width: 100%;
-  z-index: -1;
+  height:100vh;
+  min-height:100%;
+  max-height:100%;
+  z-index: 1;
 }
 
 
