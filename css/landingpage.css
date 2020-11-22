@@ -20,6 +20,7 @@ ______________________________________ */
 
 body {
   overflow-x: hidden !important;
+  background-color: rgb(22, 165, 158);
 }
 
 /* Animations
@@ -34,7 +35,7 @@ ______________________________________ */
 	animation: fadeEffect 7.5s linear infinite 0s;
 	-ms-animation: fadeEffect 7.5s linear infinite 0s;
   -webkit-animation: fadeEffect 7.5s linear infinite 0s;
-  color: rgb(196, 66, 66);
+  color: rgb(234, 255, 112);
   opacity: 0;
   margin-left: 2.5%;
 	overflow: hidden;
@@ -44,13 +45,13 @@ ______________________________________ */
 	animation-delay: 2.5s;
 	-ms-animation-delay: 2.5s;
   -webkit-animation-delay: 2.5s;
-  color: rgb(57, 161, 202);
+  color: rgb(234, 255, 112);
 }
 .fadeIn span:nth-child(3){
 	animation-delay: 5s;
 	-ms-animation-delay: 5s;
   -webkit-animation-delay: 5s;
-  color: rgb(160, 238, 144);
+  color: rgb(234, 255, 112);
 }
 
 /*FadeIn Animation*/
@@ -117,7 +118,7 @@ body {
 }
 
 #intronameline.active {
-  animation: appear 1s;
+  animation: appear 0.5s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
   visibility: visible;
@@ -149,8 +150,8 @@ body {
 
 #introname.active {
   visibility: visible;
-  animation: appear1 1s;
-  animation-delay: 1s;
+  animation: appear1 0.5s;
+  animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
 }
@@ -158,11 +159,11 @@ body {
 @keyframes appear1 {
   0%{
     opacity: 0;
-    color: rgb(252, 137, 137);
+    color: rgb(234, 255, 112);
   }
   100%{
     opacity: 1;
-    color: rgb(252, 137, 137);
+    color:rgb(234, 255, 112);
   }
 }
 
@@ -183,8 +184,8 @@ body {
 }
 #roles.active{
   visibility: hidden;
-  animation: appear3 2s;
-  animation-delay: 2s;
+  animation: appear3 1s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
   color: black;
 }
@@ -214,10 +215,10 @@ body {
 }
 
 #introp1.active {
-  animation: appear 2s;
+  animation: appear 1s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in;
-  animation-delay: 3s;
+  animation-delay: 2s;
   visibility: visible;
 }
 
@@ -252,8 +253,8 @@ ______________________________________ */
 
 #resume.active a{
   visibility: visible;
-  animation: fadeInResume 2s;
-  animation-delay: 0s;
+  animation: fadeInResume 1s;
+  animation-delay: 1s;
   animation-direction: normal;
   animation-fill-mode: forwards;
   transition: ease-in;
@@ -268,7 +269,7 @@ ______________________________________ */
     100% {
       opacity: 1;
       color: white;
-      border-color: rgb(220, 189, 164);
+      border-color: white;
     }
   }
 
@@ -294,41 +295,6 @@ ______________________________________ */
 }
 
 
-/* Get in touch button
-______________________________________ */
-
-.getintouch {
-  align-items: center;
-  margin: 1% auto;
-  text-align: center; 
-  color: white;
-}
-
-.getintouch a{
-  visibility: visible;
-  transition: ease-in;
-  font-size: 4vw;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  border-style: solid;
-  border-width: 0.3vw;
-  border-radius: 3vw;
-  padding: 0px 1vw 0px 1vw; 
-  margin:0;
-  opacity: 100;
-  -webkit-transition: ease-in-out 1s;
-  }
-  
-
-
-.getintouch a:hover {
-  background-color: rgb(255, 255, 255, 1);
-  color: black;
-  -webkit-transition: ease-in-out 0.5s;
-}
-
-
 /* Hamburger Menu
 _____________________________________ */
 
@@ -342,34 +308,6 @@ z-index: -1;
 width: 100vw;
 }
 
-
-.introbgimage{
-  background-image: url(/images/webpic2.JPG);
-  position: relative;
-  float: bottom;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: black;
-  opacity: 0;
-
-}
-
-.introbgimage.active{
-  animation: fadeInBackground 3s;
-  animation-fill-mode: forwards;
-  animation-direction: normal;
-}
-
-@keyframes fadeInBackground {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 
 
 
